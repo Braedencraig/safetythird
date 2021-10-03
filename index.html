@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Safety Third Podcast: Live</title>
+    <meta
+      name="description"
+      content="Safety Third Podcast: Live With William Osman, Backyard Scientist, Allen Pan, Peter Sripol and Nilered"
+    />
+    <meta property="og:title" content="Safety Third Podcast: Live" />
+    <meta
+      property="og:description"
+      content="Safety Third Podcast: Live With William Osman, Backyard Scientist, Allen Pan, Peter Sripol and Nilered"
+    />
+    <meta property="og:url" content="http://safetythird.live/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://safetythird.live/main.jpg" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta name="twitter:title" content="Safety Third Podcast: Live" />
+    <meta
+      name="twitter:description"
+      content="Safety Third Podcast: Live With William Osman, Backyard Scientist, Allen Pan, Peter Sripol and Nilered"
+    />
+    <meta name="twitter:image" content="http://safetythird.live/main.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.min.css"
+      integrity="sha512-lCU0XyQA8yobR7ychVxEOU5rcxs0+aYh/9gNDLaybsgW9hdrtqczjfKVNIS5doY0Y5627/+3UVuoGv7p8QsUFw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body {
+        font-family: "Secular One", sans-serif;
+        background-color: cadetblue;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        max-width: 1400px;
+        padding: 0 30px;
+        animation: fadein 2s;
+    		-moz-animation: fadein 2s; /* Firefox */
+    		-webkit-animation: fadein 2s; /* Safari and Chrome */
+   			-o-animation: fadein 2s; 
+      }
+
+      img {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+        color: white;
+        box-shadow: 0 0 30px 25px;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @-moz-keyframes fadein {
+        /* Firefox */
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes fadein {
+        /* Safari and Chrome */
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @-o-keyframes fadein {
+        /* Opera */
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .item p {
+        font-size: 24px;
+        margin: 0;
+        margin-top: 8px;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 3px 3px #000;
+      }
+
+      .item {
+        margin-bottom: 30px;
+      }
+
+      .info {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 70px;
+        /* align-items: center; */
+      }
+
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .draw-border {
+        box-shadow: inset 0 0 0 4px white;
+        color: white;
+        transition: color 0.25s 0.0833333333s;
+        position: relative;
+      }
+
+      .draw-border::before,
+      .draw-border::after {
+        border: 0 solid transparent;
+        box-sizing: border-box;
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 0;
+        right: 0;
+      }
+
+      .draw-border::before {
+        border-bottom-width: 4px;
+        border-left-width: 4px;
+      }
+
+      .draw-border::after {
+        border-top-width: 4px;
+        border-right-width: 4px;
+      }
+
+      .draw-border:hover::before,
+      .draw-border:hover::after {
+        border-color: black;
+        transition: border-color 0s, width 0.25s, height 0.25s;
+        width: 100%;
+        height: 100%;
+      }
+
+      .draw-border:hover::before {
+        transition-delay: 0s, 0s, 0.25s;
+      }
+
+      .draw-border:hover::after {
+        transition-delay: 0s, 0.25s, 0s;
+      }
+
+      .btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        line-height: 1.5;
+        font-family: "Secular One", sans-serif;
+        font-size: 24px;
+        padding: 5px 10px;
+        letter-spacing: 0.05rem;
+        text-transform: uppercase;
+        text-shadow: 3px 3px #000;
+      }
+
+      .btn:focus {
+        outline: 2px dotted #55d7dc;
+      }
+
+      .fab {
+        font-size: 24px;
+        font-style: inherit;
+      }
+
+      .person {
+        display: flex;
+        flex-direction: column;
+      }
+
+      h3 {
+        margin: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s;
+        margin: 0 4px;
+        text-shadow: 3px 3px #000;
+      }
+
+      .additional-details-mobile {
+        display: none;
+      }
+
+      .icons a:hover {
+        opacity: 0.7;
+      }
+
+      h3 {
+        font-size: 24px;
+        text-transform: uppercase;
+        text-shadow: 3px 3px #000;
+        color: white;
+      }
+
+      .dates {
+        max-width: 550px;
+        border-bottom: 10px solid white;
+      }
+
+      .socials {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 565px;
+        margin-bottom: 30px;
+      }
+
+      .icons {
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 50%;
+      }
+
+      .info {
+        width: 50%;
+      }
+
+      .item a {
+        margin-top: -40px;
+      }
+
+      .socials img {
+        box-shadow: none;
+        width: 100%;
+      }
+
+      .person-right {
+        width: 33%;
+        display: flex;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        .container {
+          flex-direction: column;
+          height: inherit;
+        }
+        
+        img {
+          margin-top: 50px;
+        }
+
+        .info, img {
+          width: 60%;
+        }
+
+        .info {
+          margin-top: 50px;
+          margin-left: 0px;
+        }
+
+        .person {
+          margin-top: 10px;
+        }
+
+        .item {
+          margin-bottom: 50px;
+        }
+
+        .dates, .social {
+          max-width: 660px;
+        }
+
+        .person-right {
+          display: none;
+        }
+
+        .additional-details-mobile {
+          display: block;
+        }
+
+        .additional-details-mobile img {
+          box-shadow: none;
+          width: 200px;
+          margin-top: -20px;
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        .info, img {
+          width: 90%;
+        }
+
+        .dates, .social {
+          max-width: none;
+        }
+      }
+
+      @media only screen and (max-width: 630px) {
+       .item a {
+         margin-top: 0;
+         margin-left: 0;
+       }
+
+       .bottom {
+         flex-direction: column;
+         align-items: flex-start;
+       }
+
+       .bottom a {
+         margin-top: 10px;
+       }
+
+       .item p, .btn, h3 {
+         font-size: 16px;
+       }
+
+       a {
+         margin: 0 5px;
+       }
+
+       h3 {
+         margin-bottom: 10px;
+       }
+
+       .additional-details-mobile img {
+         width: 150px;
+       }
+
+      }
+
+      
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="/main.jpg" alt="" />
+      <div class="info">
+        <div class="dates">
+          <div class="item">
+            <p>Thursday, December 9th, 2021</p>
+            <p class="bottom">
+              Chicago, The Vic Theatre
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <button class="btn draw-border">Tickets</button>
+              </a>
+            </p>
+          </div>
+          <div class="item">
+            <p>Friday, December 10th, 2021</p>
+            <p class="bottom">
+              Milwaukee, Turner Ballroom
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <button class="btn draw-border">Tickets</button>
+              </a>
+            </p>
+          </div>
+          <div class="item">
+            <p>Saturday, December 11th, 2021</p>
+            <p class="bottom">
+              Minneapolis, Varsity Theatre
+              <a href="http://" target="_blank" rel="noopener noreferrer">
+                <button class="btn draw-border">Tickets</button>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="socials">
+          <div class="person-left">
+            <div class="person">
+              <div class="name">
+                <h3>Safety Third Podcast</h3>
+              </div>
+              <div class="icons">
+                <a
+                  href="http://twitter.com/SafetyThirdPod"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="http://www.youtube.com/channel/UC7QE72cxiBkiwnvGoFfqYOg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+                <a href="http://podcasts.apple.com/us/podcast/safety-third/id1570503392" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-apple fa-2x"></i>
+                </a>
+                <a href="http://open.spotify.com/show/1Y9ExMgMxoBVrgrfU7u0nD" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-spotify fa-2x"></i>
+                </a>
+                <a href="http://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tL2M2ZDJlODY5LTIyYWUtNGU2OC1iODhlLWUxOTU3ZDA3MGQzYQ==" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-google fa-7x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="person">
+              <div class="name">
+                <h3>William Osman</h3>
+              </div>
+              <div class="icons">
+                <a
+                  href="http://www.instagram.com/crabsandscience/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a
+                  href="http://twitter.com/CrabsAndScience"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="http://www.youtube.com/channel/UCfMJ2MchTSW2kWaT0kK94Yw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="person">
+              <div class="name">
+                <h3>Backyard Scientist</h3>
+              </div>
+              <div class="icons">
+                <a
+                  href="http://www.instagram.com/backyardscientistlofficial/?hl=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a
+                  href="http://twitter.com/ChemicalKevy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="http://www.youtube.com/user/TheBackyardScientist"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="person">
+              <div class="name">
+                <h3>Allen Pan</h3>
+              </div>
+              <div class="icons">
+                <a
+                  href="http://www.instagram.com/sufficientlyadvanced/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a
+                  href="http://twitter.com/AnyTechnology"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="http://www.youtube.com/channel/UCVS89U86PwqzNkK2qYNbk5A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+            </div>
+            <div class="person">
+              <div class="name">
+                <h3>Peter Sripol</h3>
+              </div>
+              <div class="icons">
+                <a
+                  href="http://www.instagram.com/petersripol/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a
+                  href="http://twitter.com/petersripol"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a
+                  href="http://www.youtube.com/channel/UC7yF9tV4xWEMZkel7q8La_w"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fab fa-youtube fa-2x"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="person-right">
+            <div class="additional-details">
+              <a href="https://www.realgoodtouring.com/" target="_blank" class="rgt"
+                ><img src="rgt.png" alt="Real Good Touring"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="additional-details-mobile">
+        <a href="https://www.realgoodtouring.com/" target="_blank" class="rgt"
+          ><img src="rgt.png" alt="Real Good Touring"
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>
