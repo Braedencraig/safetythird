@@ -67,9 +67,9 @@
         max-width: 1400px;
         padding: 0 30px;
         animation: fadein 2s;
-    		-moz-animation: fadein 2s; /* Firefox */
-    		-webkit-animation: fadein 2s; /* Safari and Chrome */
-   			-o-animation: fadein 2s; 
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+        -o-animation: fadein 2s;
       }
 
       img {
@@ -120,9 +120,9 @@
         font-size: 24px;
         margin: 0;
         margin-top: 8px;
-        color: white;
+        color: black;
         text-transform: uppercase;
-        text-shadow: 3px 3px #000;
+        text-shadow: 1px 1px white;
       }
 
       .item {
@@ -145,8 +145,8 @@
       }
 
       .draw-border {
-        box-shadow: inset 0 0 0 4px white;
-        color: white;
+        box-shadow: inset 0 0 0 4px black;
+        color: black;
         transition: color 0.25s 0.0833333333s;
         position: relative;
       }
@@ -176,7 +176,7 @@
 
       .draw-border:hover::before,
       .draw-border:hover::after {
-        border-color: black;
+        border-color: white;
         transition: border-color 0s, width 0.25s, height 0.25s;
         width: 100%;
         height: 100%;
@@ -200,7 +200,8 @@
         padding: 5px 10px;
         letter-spacing: 0.05rem;
         text-transform: uppercase;
-        text-shadow: 3px 3px #000;
+        color: black;
+        text-shadow: 1px 1px white;
       }
 
       .btn:focus {
@@ -223,10 +224,10 @@
 
       a {
         text-decoration: none;
-        color: white;
+        color: black;
         transition: all 0.3s;
         margin: 0 4px;
-        text-shadow: 3px 3px #000;
+        text-shadow: 1px 1px white;
       }
 
       .additional-details-mobile {
@@ -240,13 +241,13 @@
       h3 {
         font-size: 24px;
         text-transform: uppercase;
-        text-shadow: 3px 3px #000;
-        color: white;
+        text-shadow: 1px 1px white;
+        color: black;
       }
 
       .dates {
         max-width: 550px;
-        border-bottom: 10px solid white;
+        border-bottom: 10px solid black;
       }
 
       .socials {
@@ -284,17 +285,22 @@
         align-items: center;
       }
 
+      .person-mobile {
+        display: none;
+      }
+
       @media only screen and (max-width: 1200px) {
         .container {
           flex-direction: column;
           height: inherit;
         }
-        
+
         img {
           margin-top: 50px;
         }
 
-        .info, img {
+        .info,
+        img {
           width: 60%;
         }
 
@@ -311,7 +317,8 @@
           margin-bottom: 50px;
         }
 
-        .dates, .social {
+        .dates,
+        .social {
           max-width: 660px;
         }
 
@@ -328,60 +335,137 @@
           width: 200px;
           margin-top: -20px;
         }
+
+        .person-mobile {
+          display: flex;
+          margin-top: 30px;
+        }
+
+        .person-mobile .icons {
+          text-align: center;
+        }
+
+        .person-mobile h3 {
+          font-size: 30px;
+        }
+
+        .person-mobile .fab {
+          font-size: 32px;
+        }
+
+        img {
+          margin-top: 30px;
+        }
+
+        .person-desktop {
+          display: none;
+        }
       }
 
       @media only screen and (max-width: 900px) {
-        .info, img {
+        .info,
+        img {
           width: 90%;
         }
 
-        .dates, .social {
+        .dates,
+        .social {
           max-width: none;
         }
       }
 
       @media only screen and (max-width: 630px) {
-       .item a {
-         margin-top: 0;
-         margin-left: 0;
-       }
+        .item a {
+          margin-top: 0;
+          margin-left: 0;
+        }
 
-       .bottom {
-         flex-direction: column;
-         align-items: flex-start;
-       }
+        .person-mobile h3 {
+          font-size: 22px;
+        }
 
-       .bottom a {
-         margin-top: 10px;
-       }
+        .bottom {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-       .item p, .btn, h3 {
-         font-size: 16px;
-       }
+        .bottom a {
+          margin-top: 10px;
+        }
 
-       a {
-         margin: 0 5px;
-       }
+        .item p,
+        .btn,
+        h3 {
+          font-size: 16px;
+        }
 
-       h3 {
-         margin-bottom: 10px;
-       }
+        a {
+          margin: 0 5px;
+        }
 
-       .additional-details-mobile img {
-         width: 150px;
-       }
+        h3 {
+          margin-bottom: 10px;
+        }
 
+        .additional-details-mobile img {
+          width: 150px;
+        }
       }
 
-      
+      @media only screen and (max-width: 290px) {
+        
 
-
-
+        .person-mobile h3 {
+          font-size: 20px;
+        }
+      }
     </style>
   </head>
 
   <body>
     <div class="container">
+      <div class="person person-mobile">
+        <div class="name">
+          <h3>Safety Third Podcast</h3>
+        </div>
+        <div class="icons">
+          <a
+            href="http://twitter.com/SafetyThirdPod"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a
+            href="http://www.youtube.com/channel/UC7QE72cxiBkiwnvGoFfqYOg"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <a
+            href="http://podcasts.apple.com/us/podcast/safety-third/id1570503392"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-apple fa-2x"></i>
+          </a>
+          <a
+            href="http://open.spotify.com/show/1Y9ExMgMxoBVrgrfU7u0nD"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-spotify fa-2x"></i>
+          </a>
+          <a
+            href="http://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tL2M2ZDJlODY5LTIyYWUtNGU2OC1iODhlLWUxOTU3ZDA3MGQzYQ=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-google fa-7x"></i>
+          </a>
+        </div>
+      </div>
       <img src="/main.jpg" alt="" />
       <div class="info">
         <div class="dates">
@@ -415,7 +499,7 @@
         </div>
         <div class="socials">
           <div class="person-left">
-            <div class="person">
+            <div class="person person-desktop">
               <div class="name">
                 <h3>Safety Third Podcast</h3>
               </div>
@@ -434,13 +518,25 @@
                 >
                   <i class="fab fa-youtube fa-2x"></i>
                 </a>
-                <a href="http://podcasts.apple.com/us/podcast/safety-third/id1570503392" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="http://podcasts.apple.com/us/podcast/safety-third/id1570503392"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-apple fa-2x"></i>
                 </a>
-                <a href="http://open.spotify.com/show/1Y9ExMgMxoBVrgrfU7u0nD" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="http://open.spotify.com/show/1Y9ExMgMxoBVrgrfU7u0nD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-spotify fa-2x"></i>
                 </a>
-                <a href="http://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tL2M2ZDJlODY5LTIyYWUtNGU2OC1iODhlLWUxOTU3ZDA3MGQzYQ==" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="http://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5yZWRjaXJjbGUuY29tL2M2ZDJlODY5LTIyYWUtNGU2OC1iODhlLWUxOTU3ZDA3MGQzYQ=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i class="fab fa-google fa-7x"></i>
                 </a>
               </div>
@@ -560,7 +656,10 @@
           </div>
           <div class="person-right">
             <div class="additional-details">
-              <a href="https://www.realgoodtouring.com/" target="_blank" class="rgt"
+              <a
+                href="https://www.realgoodtouring.com/"
+                target="_blank"
+                class="rgt"
                 ><img src="rgt.png" alt="Real Good Touring"
               /></a>
             </div>
